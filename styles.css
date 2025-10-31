@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #eda1d3, #ff83d6);
+  color: #fff;
+  font-family: 'Verdana', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.vendaDosNumeros {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  perspective: 1000px;
+}
+
+.Numeros-card {
+  width: 70px;
+  height: 90px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.Numeros-card.flip {
+  transform: rotateY(180deg);
+}
+
+.face-frontal,
+.face-posterio {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.face-posterio {
+  background: #ff00c3;
+  color: white;
+}
+
+.face-frontal {
+  background: #fff;
+  color: #ff00c3;
+  transform: rotateY(180deg);
+  border: 2px solid #ff00c3;
+}
